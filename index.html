@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ProPonte — Encuentra convocatorias del SECOP para tu empresa</title>
+<meta name="description" content="ProPonte es la app para buscar y seguir convocatorias del SECOP en Colombia. Recibe avisos de procesos de contratación pública (SECOP I y SECOP II) que coinciden con tu empresa por sector, departamento y valor.">
+<link rel="canonical" href="https://proponteapp.com/">
+<meta name="keywords" content="SECOP, buscar en SECOP, convocatorias SECOP, contratación pública Colombia, SECOP I, SECOP II, procesos de contratación, licitaciones Colombia, oportunidades de contratación, proponente, ProPonte">
+<meta name="theme-color" content="#081027">
+<link rel="icon" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ProPonte">
+<meta property="og:locale" content="es_CO">
+<meta property="og:url" content="https://proponteapp.com/">
+<meta property="og:title" content="ProPonte — Encuentra convocatorias del SECOP para tu empresa">
+<meta property="og:description" content="Busca y sigue convocatorias del SECOP (I y II). Recibe avisos de contratación pública que coinciden con tu empresa. Gratis, en tu celular.">
+<meta property="og:image" content="https://proponteapp.com/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ProPonte — Convocatorias del SECOP para tu empresa">
+<meta name="twitter:description" content="Busca y sigue convocatorias del SECOP. Recibe avisos de contratación pública que coinciden con tu empresa.">
+<meta name="twitter:image" content="https://proponteapp.com/logo.png">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://proponteapp.com/#org","name":"Renovatio Software","url":"https://proponteapp.com/","logo":"https://proponteapp.com/logo.png","email":"renovatiossoftware@gmail.com","areaServed":"CO"},
+{"@type":"MobileApplication","name":"ProPonte","operatingSystem":"Android","applicationCategory":"BusinessApplication","url":"https://proponteapp.com/","image":"https://proponteapp.com/logo.png","inLanguage":"es-CO","description":"App para buscar y seguir convocatorias del SECOP (I y II) en Colombia y recibir avisos de contratación pública que coinciden con tu empresa.","publisher":{"@id":"https://proponteapp.com/#org"},"offers":{"@type":"Offer","price":"0","priceCurrency":"COP"}}
+]}
+</script>
+
+<style>
+  @font-face{font-family:'Onest';font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/onest.woff2) format('woff2')}
+  @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/geistmono.woff2) format('woff2')}
+  :root{
+    --paper:#F4F7FC; --surface:#FFFFFF; --ink:#0E1730; --ink-2:#2A3350; --soft:#5A6479;
+    --brand:#0B2A8A; --brand-2:#2A55E6; --line:#E4E9F3;
+    --rojo:#E11D2A; --amarillo:#F5C518; --azul:#003893; --verde:#0E9F55;
+    --mono:'Geist Mono',ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --sans:'Onest',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  .tri{height:5px;display:flex}.tri i{flex:1}
+  .tri i:nth-child(1){background:var(--rojo)}.tri i:nth-child(2){background:var(--amarillo)}.tri i:nth-child(3){background:var(--azul)}
+
+  /* ---------- HERO oscuro ---------- */
+  .hero{position:relative;color:#fff;overflow:hidden;
+    background:
+      radial-gradient(1100px 640px at 82% 8%, rgba(42,85,230,.55), transparent 58%),
+      radial-gradient(700px 480px at 8% 92%, rgba(245,197,24,.10), transparent 60%),
+      linear-gradient(165deg,#0A1533 0%,#0C2264 52%,#0A1737 100%)}
+  .nav{max-width:1180px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between}
+  .nav .lg{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav .lg img{height:50px;border-radius:13px;display:block}
+  .nav .lg b{font-size:21px;font-weight:700;color:#fff;letter-spacing:-.015em}
+  .nav .ghost{color:#cbd6ff;text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 16px;border:1px solid rgba(255,255,255,.16);border-radius:11px}
+  .nav .ghost:hover{background:rgba(255,255,255,.08)}
+
+  .hwrap{max-width:1180px;margin:0 auto;padding:34px 32px 92px;display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#9fb4ff;font-weight:500;display:inline-flex;align-items:center;gap:10px;margin:0 0 20px}
+  .eyebrow .dd{display:inline-flex;gap:4px}.eyebrow .dd i{width:7px;height:7px;border-radius:50%}
+  .eyebrow .dd i:nth-child(1){background:var(--rojo)}.eyebrow .dd i:nth-child(2){background:var(--amarillo)}.eyebrow .dd i:nth-child(3){background:#5b86ff}
+  h1{font-size:clamp(38px,5.6vw,62px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:0;color:#fff}
+  h1 .g{background:linear-gradient(92deg,#7aa0ff,#f5c518);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:clamp(16px,1.7vw,19px);line-height:1.55;color:#c4cfef;max-width:46ch;margin:24px 0 0}
+  .cta{margin-top:36px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .play{display:inline-flex;align-items:center;gap:15px;background:#fff;color:#0d1220;text-decoration:none;
+    padding:15px 30px 15px 22px;border-radius:16px;box-shadow:0 18px 40px -18px rgba(0,0,0,.5);transition:transform .15s,box-shadow .15s}
+  .play:hover{transform:translateY(-2px);box-shadow:0 24px 50px -20px rgba(0,0,0,.55)}
+  .play img{width:34px;height:34px;display:block}
+  .play .pl{display:flex;flex-direction:column;line-height:1.04;text-align:left}
+  .play .pl small{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:#5b6577}
+  .play .pl b{font-size:21px;font-weight:700;letter-spacing:-.01em}
+  .how{color:#cbd6ff;text-decoration:none;font-size:15px;font-weight:600;border-bottom:1px solid rgba(203,214,255,.3)}
+  .how:hover{color:#fff}
+
+  /* stack de convocatorias flotantes */
+  .stage{position:relative;height:668px}
+  .cc{position:absolute;width:330px;background:#fff;color:var(--ink);border-radius:18px;padding:17px;text-align:left;
+    box-shadow:0 34px 70px -28px rgba(2,8,40,.55);border:1px solid rgba(255,255,255,.6)}
+  .cc .e{font-size:11.5px;font-weight:600;color:var(--soft)}
+  .cc .o{font-size:14px;line-height:1.3;font-weight:650;color:var(--ink);margin:8px 0 12px}
+  .cc .rr{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;margin-bottom:13px}
+  .cc .vl{font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--soft);margin:0 0 3px}
+  .cc .v{font-family:var(--mono);font-size:18.5px;font-weight:600;color:var(--ink)}
+  .bg{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;padding:5px 10px;border-radius:999px;white-space:nowrap}
+  .bg.gn{background:rgba(14,159,85,.13);color:var(--verde)}.bg.gn i{width:6px;height:6px;border-radius:50%;background:var(--verde)}
+  .bg.or{background:rgba(194,84,0,.12);color:#C25400}
+  .cc .b{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--brand);color:#fff;font-size:15px;font-weight:700;padding:12px;border-radius:12px;text-decoration:none;cursor:pointer;transition:background .15s}
+  .cc .b:hover{background:#0a2374}
+  .c1{top:0;right:8px;transform:rotate(4.5deg);z-index:1;width:306px}
+  .c2{top:446px;right:8px;transform:rotate(-5deg);z-index:2;width:302px}
+  .c3{top:223px;right:150px;transform:rotate(-1.5deg);z-index:3;width:336px}
+
+  /* ---------- secciones claras ---------- */
+  .band{max-width:1180px;margin:0 auto;padding:76px 32px 40px;text-align:center}
+  .band .k{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-2);font-weight:500;margin:0 0 12px}
+  .band h2{font-size:clamp(26px,3.6vw,38px);line-height:1.1;letter-spacing:-.03em;font-weight:800;margin:0;color:var(--ink)}
+  .steps{max-width:1180px;margin:0 auto;padding:12px 32px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .step{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px 24px}
+  .step .n{font-family:var(--mono);font-size:12px;font-weight:600;color:#fff;background:var(--brand);width:30px;height:30px;
+    border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .step:nth-child(1) .n{background:var(--rojo)}.step:nth-child(2) .n{background:#C79A00}.step:nth-child(3) .n{background:var(--azul)}
+  .step h3{font-size:18px;letter-spacing:-.015em;font-weight:700;color:var(--ink);margin:0 0 7px}
+  .step p{font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
+
+  /* CTA final */
+  .final{max-width:1120px;margin:44px auto 0;padding:0 32px}
+  .fbox{background:linear-gradient(150deg,#0C2264,#0A1533);border-radius:26px;padding:52px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .fbox::after{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 85% 20%,rgba(42,85,230,.5),transparent 60%);pointer-events:none}
+  .fbox h2{font-size:clamp(24px,3.4vw,34px);letter-spacing:-.03em;font-weight:800;margin:0 0 10px;position:relative}
+  .fbox p{color:#c4cfef;margin:0 0 26px;font-size:16px;position:relative}
+  .fbox .play{position:relative}
+
+  footer{margin-top:56px;border-top:1px solid var(--line);background:var(--surface)}
+  footer .in{max-width:1180px;margin:0 auto;padding:22px 32px;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;font-family:var(--mono);font-size:12.5px;color:var(--soft)}
+  footer a{color:var(--soft)}footer a:hover{color:var(--brand-2)}
+  a:focus-visible{outline:2px solid #7aa0ff;outline-offset:3px;border-radius:6px}
+
+  @media (max-width:900px){
+    .hwrap{grid-template-columns:1fr;gap:20px;padding-bottom:56px;text-align:center}
+    .eyebrow,.cta{justify-content:center}.lead{margin-left:auto;margin-right:auto}
+    .stage{height:auto;display:flex;justify-content:center;margin-top:14px}
+    .cc{position:static;transform:none!important;opacity:1!important;width:100%;max-width:340px}
+    .c1,.c2{display:none}
+    .steps{grid-template-columns:1fr;max-width:440px}
+  }
+  @media (max-width:520px){.nav,.hwrap,.band,.steps,.final,footer .in{padding-left:20px;padding-right:20px}.nav .lg b{display:none}}
+</style>
+</head>
+<body>
+<div class="tri" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<section class="hero">
+  <nav class="nav">
+    <a class="lg" href="/"><img src="logo.png" alt=""><b>ProPonte</b></a>
+    <a class="ghost" href="politica/">Política de datos</a>
+  </nav>
+
+  <div class="hwrap">
+    <div>
+      <p class="eyebrow"><span class="dd"><i></i><i></i><i></i></span> Contratación pública · Colombia</p>
+      <h1>No te pierdas ni una <span class="g">convocatoria del SECOP.</span></h1>
+      <p class="lead">ProPonte busca por ti en SECOP I y SECOP II, sigue a tus contratantes y te avisa de los procesos que coinciden con tu empresa — por sector, departamento y valor.</p>
+      <div class="cta">
+        <a class="play" href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener">
+          <img src="gplay.svg" alt=""><span class="pl"><small>Descárgalo en</small><b>Google Play</b></span>
+        </a>
+        <a class="how" href="#como">Cómo funciona ↓</a>
+      </div>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <article class="cc c1">
+        <div class="rr" style="margin-bottom:0"><span class="e">SANTANDER · GOB. DE SANTANDER</span><span class="bg gn"><i></i>Publicado</span></div>
+        <p class="o">Mantenimiento de la red vial secundaria del departamento.</p>
+        <div class="rr"><div><div class="vl">Valor estimado</div><div class="v">$1.240.000.000</div></div><span class="bg or">⏱ 8 días</span></div>
+        <a class="b" href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener" tabindex="-1">¡Participa! ↗</a>
+      </article>
+      <article class="cc c2">
+        <div class="rr" style="margin-bottom:0"><span class="e">VALLE · ALCALDÍA DE CALI</span><span class="bg gn"><i></i>Convocado</span></div>
+        <p class="o">Servicio de vigilancia y seguridad para las sedes administrativas.</p>
+        <div class="rr"><div><div class="vl">Valor estimado</div><div class="v">$2.100.000.000</div></div><span class="bg or">⏱ 5 días</span></div>
+        <a class="b" href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener" tabindex="-1">¡Participa! ↗</a>
+      </article>
+      <article class="cc c3">
+        <div class="rr" style="margin-bottom:0"><span class="e">ANTIOQUIA · ALCALDÍA DE MEDELLÍN</span><span class="bg gn"><i></i>Convocado</span></div>
+        <p class="o">Dotación escolar para las instituciones educativas oficiales de Medellín.</p>
+        <div class="rr"><div><div class="vl">Valor estimado</div><div class="v">$49.025.340</div></div><span class="bg or">⏱ Cierra en 3 días</span></div>
+        <a class="b" href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener" tabindex="-1">¡Participa! ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section class="band" id="como">
+    <p class="k">Cómo funciona</p>
+    <h2>De miles de procesos, solo los tuyos.</h2>
+  </section>
+  <section class="steps">
+    <article class="step"><div class="n">1</div><h3>Arma tu perfil</h3><p>Dinos tu sector (UNSPSC), tu departamento y el rango de valor que te interesa. Queda cifrado en tu celular.</p></article>
+    <article class="step"><div class="n">2</div><h3>Busca y sigue</h3><p>Explora convocatorias de SECOP I y SECOP II, y sigue a alcaldías, gobernaciones y entidades del Estado.</p></article>
+    <article class="step"><div class="n">3</div><h3>Recibe avisos</h3><p>Te avisamos cuando se publica una convocatoria que coincide contigo. Tú decides a cuáles postularte en el SECOP.</p></article>
+  </section>
+
+  <section class="final">
+    <div class="fbox">
+      <h2>Tu próxima oportunidad ya está en el SECOP.</h2>
+      <p>Descarga ProPonte gratis y empieza a seguir convocatorias hoy.</p>
+      <a class="play" href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener">
+        <img src="gplay.svg" alt=""><span class="pl"><small>Descárgalo en</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="in"><span>© 2026 Renovatio Software</span><span>·</span><a href="mailto:renovatiossoftware@gmail.com">renovatiossoftware@gmail.com</a><span>·</span><span>Hecho en Colombia</span></div></footer>
+</body>
+</html>
