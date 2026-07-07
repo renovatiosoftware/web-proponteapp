@@ -31,6 +31,17 @@
 ]}
 </script>
 
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Qué es el SECOP?","acceptedAnswer":{"@type":"Answer","text":"El SECOP (Sistema Electrónico para la Contratación Pública) es la plataforma de Colombia Compra Eficiente donde las entidades del Estado colombiano publican y gestionan sus procesos de contratación pública. Allí se publican las convocatorias abiertas a empresas y proponentes."}},
+{"@type":"Question","name":"¿Cuál es la diferencia entre SECOP I y SECOP II?","acceptedAnswer":{"@type":"Answer","text":"SECOP I es la plataforma de publicidad, donde las entidades publican la información de sus procesos para consulta. SECOP II es la plataforma transaccional, donde todo el proceso se hace en línea y los proponentes pueden presentar sus ofertas electrónicamente."}},
+{"@type":"Question","name":"¿Cómo puedo buscar convocatorias en el SECOP?","acceptedAnswer":{"@type":"Answer","text":"Puedes buscar en el SECOP filtrando por objeto, entidad, departamento y valor en los portales oficiales. Como se publican miles de procesos, ProPonte te ayuda a filtrarlos por el perfil de tu empresa y te avisa de los que coinciden contigo, tanto en SECOP I como en SECOP II."}},
+{"@type":"Question","name":"¿Cómo consulto procesos de contratación por sector o departamento?","acceptedAnswer":{"@type":"Answer","text":"En ProPonte defines tu sector (código UNSPSC), tu departamento y el rango de valor que te interesa, y la app te muestra y te notifica solo las convocatorias del SECOP que encajan con ese perfil."}},
+{"@type":"Question","name":"¿ProPonte es gratis?","acceptedAnswer":{"@type":"Answer","text":"Sí. ProPonte es gratis y se financia con publicidad. Puedes descargarla en Google Play y empezar a seguir convocatorias del SECOP sin costo."}},
+{"@type":"Question","name":"¿ProPonte está afiliada al SECOP o a Colombia Compra Eficiente?","acceptedAnswer":{"@type":"Answer","text":"No. ProPonte es una herramienta independiente de Renovatio Software que consulta información pública del SECOP. No está afiliada ni respaldada por Colombia Compra Eficiente ni por ninguna entidad del Estado."}}
+]}
+</script>
+
 <style>
   @font-face{font-family:'Onest';font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/onest.woff2) format('woff2')}
   @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/geistmono.woff2) format('woff2')}
@@ -108,6 +119,26 @@
   .step h3{font-size:18px;letter-spacing:-.015em;font-weight:700;color:var(--ink);margin:0 0 7px}
   .step p{font-size:15px;line-height:1.55;color:var(--ink-2);margin:0}
 
+  /* ---------- contenido / guía (SEO) ---------- */
+  .article{max-width:860px;margin:0 auto;padding:8px 32px}
+  .article h3{font-size:clamp(20px,2.4vw,25px);letter-spacing:-.02em;font-weight:750;color:var(--ink);margin:34px 0 10px}
+  .article p{font-size:16px;line-height:1.7;color:var(--ink-2);margin:0 0 14px}
+  .article ul{margin:0 0 14px;padding-left:20px;color:var(--ink-2);font-size:16px;line-height:1.7}
+  .article li{margin:0 0 6px}
+  .article strong{color:var(--ink);font-weight:650}
+  .article a{color:var(--brand-2);text-decoration:none;border-bottom:1px solid rgba(42,85,230,.3)}
+  .article a:hover{color:var(--brand)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:860px;margin:0 auto;padding:8px 32px 10px}
+  .faq details{border:1px solid var(--line);border-radius:14px;background:var(--surface);margin:0 0 12px;overflow:hidden}
+  .faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-size:16.5px;font-weight:650;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-family:var(--mono);font-size:22px;font-weight:400;color:var(--brand-2);transition:transform .2s;line-height:1}
+  .faq details[open] summary::after{transform:rotate(45deg)}
+  .faq .a{padding:0 22px 20px;font-size:15.5px;line-height:1.65;color:var(--ink-2)}
+  .faq .a p{margin:0 0 10px}.faq .a p:last-child{margin:0}
+
   /* CTA final */
   .final{max-width:1120px;margin:44px auto 0;padding:0 32px}
   .fbox{background:linear-gradient(150deg,#0C2264,#0A1533);border-radius:26px;padding:52px 40px;text-align:center;color:#fff;position:relative;overflow:hidden}
@@ -129,7 +160,7 @@
     .c1,.c2{display:none}
     .steps{grid-template-columns:1fr;max-width:440px}
   }
-  @media (max-width:520px){.nav,.hwrap,.band,.steps,.final,footer .in{padding-left:20px;padding-right:20px}.nav .lg b{display:none}}
+  @media (max-width:520px){.nav,.hwrap,.band,.steps,.article,.faq,.final,footer .in{padding-left:20px;padding-right:20px}.nav .lg b{display:none}}
 </style>
 </head>
 <body>
@@ -187,6 +218,42 @@
     <article class="step"><div class="n">2</div><h3>Busca y sigue</h3><p>Explora convocatorias de SECOP I y SECOP II, y sigue a alcaldías, gobernaciones y entidades del Estado.</p></article>
     <article class="step"><div class="n">3</div><h3>Recibe avisos</h3><p>Te avisamos cuando se publica una convocatoria que coincide contigo. Tú decides a cuáles postularte en el SECOP.</p></article>
   </section>
+
+  <section class="band" id="guia">
+    <p class="k">Guía rápida</p>
+    <h2>Cómo buscar y consultar convocatorias en el SECOP</h2>
+  </section>
+  <article class="article">
+    <h3>¿Qué es el SECOP?</h3>
+    <p>El <strong>SECOP</strong> (Sistema Electrónico para la Contratación Pública) es la plataforma donde las entidades del Estado colombiano publican y gestionan sus procesos de contratación. Lo administra <strong>Colombia Compra Eficiente</strong>, y allí están las <strong>convocatorias</strong> —licitaciones, concursos, invitaciones y demás procesos— a las que puede presentarse cualquier empresa o proponente.</p>
+
+    <h3>SECOP I y SECOP II: ¿cuál es la diferencia?</h3>
+    <p>El sistema tiene dos versiones, y las convocatorias pueden estar en cualquiera de ellas:</p>
+    <ul>
+      <li><strong>SECOP I</strong> es la plataforma de <strong>publicidad</strong>: las entidades publican la información de sus procesos para consulta pública.</li>
+      <li><strong>SECOP II</strong> es la plataforma <strong>transaccional</strong>: todo el proceso ocurre en línea y los proponentes pueden presentar sus ofertas electrónicamente.</li>
+    </ul>
+    <p>Por eso conviene <strong>buscar y consultar en el SECOP I y en el SECOP II</strong>: la convocatoria que te interesa puede estar en uno o en otro.</p>
+
+    <h3>Cómo buscar convocatorias en el SECOP</h3>
+    <p>Puedes <strong>buscar en el SECOP</strong> desde los portales oficiales, filtrando por objeto, entidad, ubicación o valor. El problema es que se publican <strong>miles de procesos cada semana</strong> en todo el país, y revisarlos manualmente día tras día toma mucho tiempo: es fácil que se te pase justo la convocatoria que encajaba con tu empresa.</p>
+
+    <h3>Cómo ProPonte te ayuda</h3>
+    <p><strong>ProPonte</strong> hace ese trabajo por ti: rastrea las convocatorias del <strong>SECOP I y SECOP II</strong>, las filtra según el perfil de tu empresa (sector, departamento y rango de valor) y te <strong>avisa</strong> cuando aparece un proceso que coincide contigo. Así consultas solo lo que te sirve y llegas a tiempo para postularte en el SECOP. <a href="https://play.google.com/store/apps/details?id=co.renovatiosoftware.proponte" rel="noopener">Descarga ProPonte gratis en Google Play</a>.</p>
+  </article>
+
+  <section class="band" id="faq" style="padding-top:56px">
+    <p class="k">Preguntas frecuentes</p>
+    <h2>Dudas sobre buscar en el SECOP</h2>
+  </section>
+  <div class="faq">
+    <details><summary>¿Qué es el SECOP?</summary><div class="a"><p>El SECOP (Sistema Electrónico para la Contratación Pública) es la plataforma de Colombia Compra Eficiente donde las entidades del Estado publican y gestionan sus procesos de contratación pública. Allí se publican las convocatorias abiertas a empresas y proponentes.</p></div></details>
+    <details><summary>¿Cuál es la diferencia entre SECOP I y SECOP II?</summary><div class="a"><p>SECOP I es la plataforma de publicidad, donde las entidades publican la información de sus procesos para consulta. SECOP II es la plataforma transaccional, donde todo el proceso se hace en línea y los proponentes pueden presentar sus ofertas electrónicamente.</p></div></details>
+    <details><summary>¿Cómo puedo buscar convocatorias en el SECOP?</summary><div class="a"><p>Puedes buscar en el SECOP filtrando por objeto, entidad, departamento y valor en los portales oficiales. Como se publican miles de procesos, ProPonte te ayuda a filtrarlos por el perfil de tu empresa y te avisa de los que coinciden contigo, en SECOP I y SECOP II.</p></div></details>
+    <details><summary>¿Cómo consulto procesos por sector o departamento?</summary><div class="a"><p>En ProPonte defines tu sector (código UNSPSC), tu departamento y el rango de valor que te interesa, y la app te muestra y te notifica solo las convocatorias que encajan con ese perfil.</p></div></details>
+    <details><summary>¿ProPonte es gratis?</summary><div class="a"><p>Sí. ProPonte es gratis y se financia con publicidad. Puedes descargarla en Google Play y empezar a seguir convocatorias del SECOP sin costo.</p></div></details>
+    <details><summary>¿ProPonte está afiliada al SECOP o a Colombia Compra Eficiente?</summary><div class="a"><p>No. ProPonte es una herramienta independiente de Renovatio Software que consulta información pública del SECOP. No está afiliada ni respaldada por Colombia Compra Eficiente ni por ninguna entidad del Estado.</p></div></details>
+  </div>
 
   <section class="final">
     <div class="fbox">
